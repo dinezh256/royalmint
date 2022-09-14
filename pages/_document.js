@@ -11,6 +11,13 @@ class MyDocument extends Document {
           <meta name="description" content="The Royal Mint Baharagora" />
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="manifest" href="/manifest.json" />
+          <link
+            rel="preload"
+            href="/fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="true"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://royalmint.vercel.app/" />
           <meta property="og:title" content="The Royal Mint Baharagora" />

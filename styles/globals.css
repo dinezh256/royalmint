@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "berkshireRegular";
+  src: url("/fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf");
+  src: local("robotoBlack"),
+    url("/fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
@@ -79,17 +88,12 @@ a {
   border-radius: 25px;
 }
 
-.menu-opened {
-  overflow: hidden;
-  height: 100vh;
-}
-
 .menu-links span {
   padding: 0 10px;
   white-space: nowrap;
-  font-size: 17px;
+  font-size: 20px;
   transition: all 0.2s ease;
-  font-family: "Gill Sans";
+  font-family: berkshireRegular;
   cursor: pointer;
   user-select: none;
   scroll-margin-top: 80px;
@@ -107,6 +111,11 @@ a {
 }
 
 @media screen and (max-width: 500px) {
+  .menu-opened {
+    overflow: hidden;
+    height: 100vh;
+  }
+
   .navbar-container {
     padding: 5px 5px;
     z-index: 101;
@@ -154,9 +163,9 @@ a {
 
   .menu-links span {
     padding: 15px 0 12.5px 80px;
-    font-size: 28px;
-    font-family: "Gill Sans";
-    font-weight: 600;
+    font-size: 27px;
+    color: #155457;
+    font-family: berkshireRegular;
     animation: peakUp 0.5s ease both;
   }
 

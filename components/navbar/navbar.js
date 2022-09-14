@@ -32,10 +32,8 @@ const Navbar = () => {
 
   const scrollToComponent = (id) => {
     const doc = window.document.getElementById(id);
-    console.log({ doc });
     if (doc) {
       const position = doc.getBoundingClientRect();
-      // scrolls to 20px above element
       window.scrollTo(position.left, position.top + window.scrollY - 90);
     }
   };
