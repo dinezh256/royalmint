@@ -1,6 +1,7 @@
 import { useState } from "react";
-import logo from "./../../assets/images/logo.png";
 import Image from "next/image";
+import Link from 'next/link';
+import logo from "./../../assets/images/logo.png";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -20,15 +21,17 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <Image
-        src={logo}
-        className="navbar-logo"
-        alt="client Background"
-        draggable={false}
-        priority={true}
-        width={96}
-        height={75}
-      />
+      <Link href="/">
+          <Image
+            src={logo}
+            className="navbar-logo"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+            width={96}
+            height={75}
+          />
+      </Link>
       <div className="menu">
         <div
           className={`menu-icon ${openMenu ? "opened" : "closed"}`}
