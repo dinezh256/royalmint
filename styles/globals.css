@@ -141,7 +141,7 @@ a {
     width: 100vw !important;
     right: 0;
     top: 72.5px;
-    overflow: hidden;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     z-index: 99;
@@ -150,7 +150,7 @@ a {
   }
 
   .menu-links a {
-    padding: 15px 0 10px 80px;
+    padding: 15px 0 12.5px 80px;
     font-size: 28px;
     font-family: "Gill Sans";
     font-weight: 600;
