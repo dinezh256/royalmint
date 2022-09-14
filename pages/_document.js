@@ -25,7 +25,7 @@ class MyDocument extends Document {
           <meta property="og:description" content="The Royal Mint Baharagora" />
           <meta
             property="og:image"
-            content="https://royalmint.vercel.app//logo512.png"
+            content="https://royalmint.vercel.app/logo512.png"
           />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="512" />
