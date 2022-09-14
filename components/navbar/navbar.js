@@ -7,41 +7,44 @@ import { isMobile } from "../../utils";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const handleOpenMenu = () => {
-    setOpenMenu((state) => {
-      if (isMobile()) {
-        if (state) {
-          document.body.classList.remove("menu-opened");
-        } else {
-          document.body.classList.add("menu-opened");
-        }
+  const handleOpenMenu = (state) => {
+    setOpenMenu(state);
+
+    if (isMobile()) {
+      if (!state) {
+        document.body.classList.remove("menu-opened");
+      } else {
+        document.body.classList.add("menu-opened");
       }
-      return !state;
-    });
+    }
   };
   const MenuLink = ({ href, children }) => (
-    <a href={href} onClick={handleOpenMenu}>
+    <a href={href} onClick={() => handleOpenMenu(!openMenu)}>
       {children}
     </a>
   );
   return (
     <div className="navbar-container">
       <div className="navbar">
-        <Link href="/">
-          <Image
-            src={logo}
-            className="navbar-logo"
-            alt="client Background"
-            draggable={false}
-            priority={true}
-            width={80}
-            height={62.5}
-          />
-        </Link>
+        <div
+          className={`navbar-logo ${openMenu ? "opened" : ""}`}
+          onClick={() => handleOpenMenu(false)}
+        >
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="client Background"
+              draggable={false}
+              priority={true}
+              width={80}
+              height={62.5}
+            />
+          </Link>
+        </div>
         <div className="menu">
           <div
             className={`menu-icon ${openMenu ? "opened" : "closed"}`}
-            onClick={handleOpenMenu}
+            onClick={() => handleOpenMenu(!openMenu)}
           >
             <div className="line1"></div>
             <div className="line2"></div>
@@ -54,8 +57,8 @@ const Navbar = () => {
             <MenuLink href="#tandoori">Tandoori</MenuLink>
             <MenuLink href="#bread">Bread</MenuLink>
             <MenuLink href="#rice">Rice</MenuLink>
-            <MenuLink href="#veg">Veg Course</MenuLink>
-            <MenuLink href="#non-veg">Non-Veg Course</MenuLink>
+            <MenuLink href="#veg">Veg</MenuLink>
+            <MenuLink href="#non-veg">Non-Veg</MenuLink>
             <MenuLink href="#desserts">Desserts</MenuLink>
             <MenuLink href="#beverages">Beverages</MenuLink>
           </div>

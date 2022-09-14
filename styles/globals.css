@@ -106,10 +106,16 @@ a {
 @media screen and (max-width: 500px) {
   .navbar-container {
     padding: 5px 5px;
+    z-index: 101;
   }
-  
+
   .navbar {
     width: 100%;
+  }
+
+  .navbar-logo.opened {
+    margin-left: 60px !important;
+    transition: all 0.25s ease;
   }
 
   .main-app {
@@ -122,23 +128,25 @@ a {
     min-height: 100% !important;
     max-height: 100% !important;
   }
+
   .navbar-logo {
     transform: scale(0.75);
+    transition: all 0.25s ease;
   }
 
   .menu-links {
     position: absolute;
     background-color: #b18f44;
-    height: 100vh;
+    height: calc(100vh - 72.5px);
     width: 100vw !important;
     right: 0;
-    top: 0;
+    top: 72.5px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     z-index: 99;
     transition: all 0.35s ease;
-    padding: 100px 0;
+    padding: 60px 0;
   }
 
   .menu-links a {
@@ -146,6 +154,7 @@ a {
     font-size: 28px;
     font-family: "Gill Sans";
     font-weight: 600;
+    animation: peakUp 0.5s ease both;
   }
 
   .menu-links.close {
