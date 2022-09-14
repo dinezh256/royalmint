@@ -1,36 +1,41 @@
 import { useState } from "react";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import logo from "./../../assets/images/logo.png";
+import { isMobile } from "../../utils";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => {
     setOpenMenu((state) => {
-      if (state) {
-        // setTimeout(() => 
-        document.body.classList.remove("menu-opened");
-        
-        // , 1000);
-      } else {
-        document.body.classList.add("menu-opened");
+      if (isMobile()) {
+        if (state) {
+          document.body.classList.remove("menu-opened");
+        } else {
+          document.body.classList.add("menu-opened");
+        }
       }
       return !state;
     });
   };
+  const MenuLink = ({ href, children }) => (
+    <a href={href} onClick={handleOpenMenu}>
+      {children}
+    </a>
+  );
   return (
     <div className="navbar">
       <Link href="/">
-          <Image
-            src={logo}
-            className="navbar-logo"
-            alt="client Background"
-            draggable={false}
-            priority={true}
-            width={96}
-            height={75}
-          />
+        <Image
+          src={logo}
+          className="navbar-logo"
+          alt="client Background"
+          draggable={false}
+          priority={true}
+          width={96}
+          height={75}
+        />
       </Link>
       <div className="menu">
         <div
@@ -42,36 +47,16 @@ const Navbar = () => {
           <div className="line3"></div>
         </div>
         <div className={`menu-links ${openMenu ? "open" : "close"}`}>
-          <a href="#snacks" onClick={handleOpenMenu}>
-            Snacks
-          </a>
-          <a href="#breakfast" onClick={handleOpenMenu}>
-            Breakfast
-          </a>
-          <a href="#chinese" onClick={handleOpenMenu}>
-            Chinese
-          </a>
-          <a href="#tandoori" onClick={handleOpenMenu}>
-            Tandoori
-          </a>
-          <a href="#bread" onClick={handleOpenMenu}>
-            Bread
-          </a>
-          <a href="#rice" onClick={handleOpenMenu}>
-            Rice
-          </a>
-          <a href="#veg" onClick={handleOpenMenu}>
-            Veg Course
-          </a>
-          <a href="#non-veg" onClick={handleOpenMenu}>
-            Non-Veg Course
-          </a>
-          <a href="#desserts" onClick={handleOpenMenu}>
-            Desserts
-          </a>
-          <a href="#beverages" onClick={handleOpenMenu}>
-            Beverages
-          </a>
+          <MenuLink href="#snacks">Snacks</MenuLink>
+          <MenuLink href="#breakfast">Breakfast</MenuLink>
+          <MenuLink href="#chinese">Chinese</MenuLink>
+          <MenuLink href="#tandoori">Tandoori</MenuLink>
+          <MenuLink href="#bread">Bread</MenuLink>
+          <MenuLink href="#rice">Rice</MenuLink>
+          <MenuLink href="#veg">Veg Course</MenuLink>
+          <MenuLink href="#non-veg">Non-Veg Course</MenuLink>
+          <MenuLink href="#desserts">Desserts</MenuLink>
+          <MenuLink href="#beverages">Beverages</MenuLink>
         </div>
       </div>
     </div>

@@ -135,7 +135,7 @@ a {
   .menu-icon.opened .line2 {
     transform: scaleX(0);
     transform-origin: center;
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
   }
 
   .menu-icon.opened .line3 {
@@ -153,7 +153,7 @@ a {
   .menu-icon.closed .line2 {
     transform: scaleX(1);
     transform-origin: center;
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
   }
 
   .menu-icon.closed .line3 {
