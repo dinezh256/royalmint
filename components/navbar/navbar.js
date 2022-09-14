@@ -18,11 +18,27 @@ const Navbar = () => {
       }
     }
   };
-  const MenuLink = ({ href, children }) => (
-    <a href={href} onClick={() => handleOpenMenu(!openMenu)}>
+
+  const MenuLink = ({ id, children }) => (
+    <span
+      onClick={() => {
+        handleOpenMenu(!openMenu);
+        scrollToComponent(id);
+      }}
+    >
       {children}
-    </a>
+    </span>
   );
+
+  const scrollToComponent = (id) => {
+    const doc = window.document.getElementById(id);
+    console.log({ doc });
+    if (doc) {
+      const position = doc.getBoundingClientRect();
+      // scrolls to 20px above element
+      window.scrollTo(position.left, position.top + window.scrollY - 90);
+    }
+  };
   return (
     <div className="navbar-container">
       <div className="navbar">
@@ -51,16 +67,16 @@ const Navbar = () => {
             <div className="line3"></div>
           </div>
           <div className={`menu-links ${openMenu ? "open" : "close"}`}>
-            <MenuLink href="#snacks">Snacks</MenuLink>
-            <MenuLink href="#breakfast">Breakfast</MenuLink>
-            <MenuLink href="#chinese">Chinese</MenuLink>
-            <MenuLink href="#tandoori">Tandoori</MenuLink>
-            <MenuLink href="#bread">Bread</MenuLink>
-            <MenuLink href="#rice">Rice</MenuLink>
-            <MenuLink href="#veg">Veg</MenuLink>
-            <MenuLink href="#non-veg">Non-Veg</MenuLink>
-            <MenuLink href="#desserts">Desserts</MenuLink>
-            <MenuLink href="#beverages">Beverages</MenuLink>
+            <MenuLink id="snacks">Snacks</MenuLink>
+            <MenuLink id="breakfast">Breakfast</MenuLink>
+            <MenuLink id="chinese">Chinese</MenuLink>
+            <MenuLink id="tandoori">Tandoori</MenuLink>
+            <MenuLink id="bread">Bread</MenuLink>
+            <MenuLink id="rice">Rice</MenuLink>
+            <MenuLink id="veg">Veg</MenuLink>
+            <MenuLink id="non-veg">Non-Veg</MenuLink>
+            <MenuLink id="desserts">Desserts</MenuLink>
+            <MenuLink id="beverages">Beverages</MenuLink>
           </div>
         </div>
       </div>

@@ -84,15 +84,18 @@ a {
   height: 100vh;
 }
 
-.menu-links a {
+.menu-links span {
   padding: 0 10px;
   white-space: nowrap;
   font-size: 17px;
   transition: all 0.2s ease;
   font-family: "Gill Sans";
+  cursor: pointer;
+  user-select: none;
+  scroll-margin-top: 80px;
 }
 
-.menu-links a:hover {
+.menu-links span:hover {
   color: #c3b45d;
   transition: all 0.2s ease;
 }
@@ -149,7 +152,7 @@ a {
     padding: 60px 0;
   }
 
-  .menu-links a {
+  .menu-links span {
     padding: 15px 0 12.5px 80px;
     font-size: 28px;
     font-family: "Gill Sans";
@@ -161,7 +164,7 @@ a {
     width: 0px !important;
   }
 
-  .menu-links.close a {
+  .menu-links.close span {
     animation: fadeOut 0.25s ease both;
   }
 
