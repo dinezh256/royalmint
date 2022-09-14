@@ -2,15 +2,16 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "./../../assets/images/logo.png";
-import { isMobile } from "../../utils";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const isMobile = useWindowSize().width < 500;
 
   const handleOpenMenu = (state) => {
     setOpenMenu(state);
 
-    if (isMobile()) {
+    if (isMobile) {
       if (!state) {
         document.body.classList.remove("menu-opened");
       } else {
@@ -37,6 +38,7 @@ const Navbar = () => {
       window.scrollTo(position.left, position.top + window.scrollY - 90);
     }
   };
+
   return (
     <div className="navbar-container">
       <div className="navbar">

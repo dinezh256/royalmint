@@ -1,38 +1,39 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import page2 from "./../../../assets/images/desktop/02.png";
-import page3 from "./../../../assets/images/desktop/03.png";
-import page4 from "./../../../assets/images/desktop/04.png";
-import page5 from "./../../../assets/images/desktop/05.png";
-import page6 from "./../../../assets/images/desktop/06.png";
-import page7 from "./../../../assets/images/desktop/07.png";
-import page8 from "./../../../assets/images/desktop/08.png";
-import page9 from "./../../../assets/images/desktop/09.png";
-import page10 from "./../../../assets/images/desktop/10.png";
-import page11 from "./../../../assets/images/desktop/11.png";
-import page2M from "./../../../assets/images/mobile/02M.png";
-import page3M from "./../../../assets/images/mobile/03M.png";
-import page4M from "./../../../assets/images/mobile/04M.png";
-import page5M from "./../../../assets/images/mobile/05M.png";
-import page6M from "./../../../assets/images/mobile/06M.png";
-import page7M from "./../../../assets/images/mobile/07M.png";
-import page8M from "./../../../assets/images/mobile/08M.png";
-import page9M from "./../../../assets/images/mobile/09M.png";
-import page10M from "./../../../assets/images/mobile/10M.png";
-import page11M from "./../../../assets/images/mobile/11M.png";
+import page2 from "./../../assets/images/desktop/02.png";
+import page3 from "./../../assets/images/desktop/03.png";
+import page4 from "./../../assets/images/desktop/04.png";
+import page5 from "./../../assets/images/desktop/05.png";
+import page6 from "./../../assets/images/desktop/06.png";
+import page7 from "./../../assets/images/desktop/07.png";
+import page8 from "./../../assets/images/desktop/08.png";
+import page9 from "./../../assets/images/desktop/09.png";
+import page10 from "./../../assets/images/desktop/10.png";
+import page11 from "./../../assets/images/desktop/11.png";
+import page2M from "./../../assets/images/mobile/02M.png";
+import page3M from "./../../assets/images/mobile/03M.png";
+import page4M from "./../../assets/images/mobile/04M.png";
+import page5M from "./../../assets/images/mobile/05M.png";
+import page6M from "./../../assets/images/mobile/06M.png";
+import page7M from "./../../assets/images/mobile/07M.png";
+import page8M from "./../../assets/images/mobile/08M.png";
+import page9M from "./../../assets/images/mobile/09M.png";
+import page10M from "./../../assets/images/mobile/10M.png";
+import page11M from "./../../assets/images/mobile/11M.png";
 
-import { isMobile } from "../../../utils";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Landing = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const isMobile = useWindowSize().width < 500;
 
   useEffect(() => {
-    setIsMobileDevice(isMobile());
-  }, []);
+    setIsMobileDevice(isMobile);
+  }, [isMobile]);
 
   return (
-    <div className="main-app">
+    <div className="main-app" key={isMobile}>
       <div className="main-app-overlay">
         <div className="menuImageContainer" id="snacks">
           <Image

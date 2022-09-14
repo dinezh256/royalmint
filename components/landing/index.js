@@ -1,3 +1,3 @@
-import Landing from "../../assets/images/desktop/landing";
+import Landing from "./landing";
 
-export default Landing
+export default Landing;
