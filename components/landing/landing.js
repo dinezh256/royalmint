@@ -10,16 +10,16 @@ import page8 from "./../../assets/images/desktop/08.png";
 import page9 from "./../../assets/images/desktop/09.png";
 import page10 from "./../../assets/images/desktop/10.png";
 import page11 from "./../../assets/images/desktop/11.png";
-import page2M from "./../../assets/images/mobile/02M.png";
-import page3M from "./../../assets/images/mobile/03M.png";
-import page4M from "./../../assets/images/mobile/04M.png";
-import page5M from "./../../assets/images/mobile/05M.png";
-import page6M from "./../../assets/images/mobile/06M.png";
-import page7M from "./../../assets/images/mobile/07M.png";
-import page8M from "./../../assets/images/mobile/08M.png";
-import page9M from "./../../assets/images/mobile/09M.png";
-import page10M from "./../../assets/images/mobile/10M.png";
-import page11M from "./../../assets/images/mobile/11M.png";
+import page2M from "./../../assets/images/mobile/02M.jpeg";
+import page3M from "./../../assets/images/mobile/03M.jpeg";
+import page4M from "./../../assets/images/mobile/04M.jpeg";
+import page5M from "./../../assets/images/mobile/05M.jpeg";
+import page6M from "./../../assets/images/mobile/06M.jpeg";
+import page7M from "./../../assets/images/mobile/07M.jpeg";
+import page8M from "./../../assets/images/mobile/08M.jpeg";
+import page9M from "./../../assets/images/mobile/09M.jpeg";
+import page10M from "./../../assets/images/mobile/10M.jpeg";
+import page11M from "./../../assets/images/mobile/11M.jpeg";
 
 import useWindowSize from "../../hooks/useWindowSize";
 
