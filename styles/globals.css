@@ -45,7 +45,7 @@ a {
   min-height: 87.5% !important;
   max-height: 87.5% !important;
   margin: auto;
-  animation: peakUp 0.35s ease both;
+  animation: peakUp 0.5s ease both;
 }
 
 .menuImageContainer {

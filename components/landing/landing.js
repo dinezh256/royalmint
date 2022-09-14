@@ -47,7 +47,6 @@ const Landing = () => {
             className="menuImage"
             alt="client Background"
             draggable={false}
-            priority={true}
           />
         </div>
         <div className="menuImageContainer" id="bread">
@@ -56,7 +55,6 @@ const Landing = () => {
             className="menuImage"
             alt="client Background"
             draggable={false}
-            priority={true}
           />
         </div>
         <div className="menuImageContainer" id="rice">
@@ -65,7 +63,6 @@ const Landing = () => {
             className="menuImage"
             alt="client Background"
             draggable={false}
-            priority={true}
           />
         </div>
         <div className="menuImageContainer" id="veg">
@@ -74,7 +71,6 @@ const Landing = () => {
             className="menuImage"
             alt="client Background"
             draggable={false}
-            priority={true}
           />
         </div>
         <div className="menuImageContainer" id="non-veg">
@@ -92,7 +88,6 @@ const Landing = () => {
             className="menuImage"
             alt="client Background"
             draggable={false}
-            priority={true}
           />
         </div>
         <div className="menuImageContainer" id="beverages">
@@ -101,7 +96,6 @@ const Landing = () => {
             className="menuImage"
             alt="client Background"
             draggable={false}
-            priority={true}
           />
         </div>
       </div>
