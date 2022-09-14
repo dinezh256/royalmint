@@ -46,6 +46,7 @@ a {
   max-height: 87.5% !important;
   margin: auto;
   animation: peakUp 0.5s ease both;
+  animation-delay: 0.5s;
 }
 
 .menuImageContainer {
@@ -91,7 +92,7 @@ a {
 .menu-links span {
   padding: 0 10px;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 18px;
   transition: all 0.2s ease;
   font-family: berkshireRegular;
   cursor: pointer;

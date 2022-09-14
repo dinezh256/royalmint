@@ -76,7 +76,7 @@ const Navbar = () => {
             <MenuLink id="veg">Veg</MenuLink>
             <MenuLink id="non-veg">Non-Veg</MenuLink>
             <MenuLink id="desserts">Desserts</MenuLink>
-            <MenuLink id="beverages">Beverages</MenuLink>
+            <MenuLink id="beverages">Beverage</MenuLink>
           </div>
         </div>
       </div>

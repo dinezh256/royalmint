@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import page2 from "./../../assets/images/desktop/02.png";
@@ -25,97 +24,92 @@ import page11M from "./../../assets/images/mobile/11M.png";
 import useWindowSize from "../../hooks/useWindowSize";
 
 const Landing = () => {
-  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const isMobile = useWindowSize().width < 500;
-
-  useEffect(() => {
-    setIsMobileDevice(isMobile);
-  }, [isMobile]);
 
   return (
     <div className="main-app" key={isMobile}>
       <div className="main-app-overlay">
         <div className="menuImageContainer" id="snacks">
           <Image
-            src={isMobileDevice ? page2M : page2}
+            src={isMobile ? page2M : page2}
             className="menuImage"
-            alt="client Background"
+            alt="snacks"
             draggable={false}
             priority={true}
           />
         </div>
         <div className="menuImageContainer" id="breakfast">
           <Image
-            src={isMobileDevice ? page3M : page3}
+            src={isMobile ? page3M : page3}
             className="menuImage"
-            alt="client Background"
+            alt="breakast"
             draggable={false}
             priority={true}
           />
         </div>
         <div className="menuImageContainer" id="chinese">
           <Image
-            src={isMobileDevice ? page4M : page4}
+            src={isMobile ? page4M : page4}
             className="menuImage"
-            alt="client Background"
+            alt="chinese"
             draggable={false}
             priority={true}
           />
         </div>
         <div className="menuImageContainer" id="tandoori">
           <Image
-            src={isMobileDevice ? page5M : page5}
+            src={isMobile ? page5M : page5}
             className="menuImage"
-            alt="client Background"
+            alt="tandoori"
             draggable={false}
           />
         </div>
         <div className="menuImageContainer" id="bread">
           <Image
-            src={isMobileDevice ? page6M : page6}
+            src={isMobile ? page6M : page6}
             className="menuImage"
-            alt="client Background"
+            alt="bread"
             draggable={false}
           />
         </div>
         <div className="menuImageContainer" id="rice">
           <Image
-            src={isMobileDevice ? page7M : page7}
+            src={isMobile ? page7M : page7}
             className="menuImage"
-            alt="client Background"
+            alt="rice"
             draggable={false}
           />
         </div>
         <div className="menuImageContainer" id="veg">
           <Image
-            src={isMobileDevice ? page8M : page8}
+            src={isMobile ? page8M : page8}
             className="menuImage"
-            alt="client Background"
+            alt="veg"
             draggable={false}
           />
         </div>
         <div className="menuImageContainer" id="non-veg">
           <Image
-            src={isMobileDevice ? page9M : page9}
+            src={isMobile ? page9M : page9}
             className="menuImage"
-            alt="client Background"
+            alt="non-veg"
             draggable={false}
             priority={true}
           />
         </div>
         <div className="menuImageContainer" id="desserts">
           <Image
-            src={isMobileDevice ? page10M : page10}
+            src={isMobile ? page10M : page10}
             className="menuImage"
-            alt="client Background"
+            alt="desserts"
             draggable={false}
           />
         </div>
         <div className="menuImageContainer" id="beverages">
           <Image
-            src={isMobileDevice ? page11M : page11}
+            src={isMobile ? page11M : page11}
             className="menuImage"
-            alt="client Background"
+            alt="beverage"
             draggable={false}
           />
         </div>
