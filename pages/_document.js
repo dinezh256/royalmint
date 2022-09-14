@@ -22,7 +22,7 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://royalmint.vercel.app/" />
           <meta property="og:title" content="The Royal Mint Baharagora" />
-          <meta property="og:description" content="The Royal Mint Baharagora" />
+          <meta property="og:description" content="The Royal Mint - a multicuisine restaurant in Baharagora" />
           <meta
             property="og:image"
             content="https://royalmint.vercel.app/logo512.png"
