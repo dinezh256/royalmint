@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.theroyalmint.com" />
+          <meta property="og:url" content="https://royalmint.vercel.app/" />
           <meta property="og:title" content="The Royal Mint Baharagora" />
           <meta
             property="og:description"
@@ -21,7 +21,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://www.theroyalmint.com/logo512.png"
+            content="https://royalmint.vercel.app//logo512.png"
           />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="512" />

@@ -28,10 +28,10 @@ a {
 }
 
 .clientBackground {
-  max-width: 90% !important;
-  min-width: 90% !important;
-  min-height: 90% !important;
-  max-height: 90% !important;
+  max-width: 87.5% !important;
+  min-width: 87.5% !important;
+  min-height: 87.5% !important;
+  max-height: 87.5% !important;
 
   margin: auto;
 }
