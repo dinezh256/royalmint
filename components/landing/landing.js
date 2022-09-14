@@ -14,76 +14,96 @@ const Landing = () => {
   return (
     <div className="main-app">
       <div className="main-app-overlay">
-        <Image
-          src={page2}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page3}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page4}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page5}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page6}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page7}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page8}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page9}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page10}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
-        <Image
-          src={page11}
-          className="clientBackground"
-          alt="client Background"
-          draggable={false}
-          priority={true}
-        />
+        <div className="menuImageContainer" id="snacks">
+          <Image
+            src={page2}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="breakfast">
+          <Image
+            src={page3}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="chinese">
+          <Image
+            src={page4}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="tandoori">
+          <Image
+            src={page5}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="bread">
+          <Image
+            src={page6}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="rice">
+          <Image
+            src={page7}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="veg">
+          <Image
+            src={page8}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="non-veg">
+          <Image
+            src={page9}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="desserts">
+          <Image
+            src={page10}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
+        <div className="menuImageContainer" id="beverages">
+          <Image
+            src={page11}
+            className="menuImage"
+            alt="client Background"
+            draggable={false}
+            priority={true}
+          />
+        </div>
       </div>
     </div>
   );
