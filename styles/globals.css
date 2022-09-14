@@ -36,6 +36,7 @@ a {
   min-height: 87.5% !important;
   max-height: 87.5% !important;
   margin: auto;
+  animation: peakUp 0.35s ease both;
 }
 
 .menuImageContainer {
@@ -51,7 +52,7 @@ a {
   position: fixed;
   top: 0;
   background-color: #1554576e;
-  backdrop-filter: blur(6px) brightness(0.8);
+  backdrop-filter: blur(8px) brightness(0.8);
   z-index: 5;
 }
 
@@ -68,9 +69,9 @@ a {
 
 .menu-icon div {
   width: 30px;
-  background-color: white;
+  background-color: rgb(210, 210, 210);
   height: 4px;
-  border-radius: 2px;
+  border-radius: 25px;
 }
 
 .menu-opened {
@@ -127,7 +128,7 @@ a {
     display: flex;
     flex-direction: column;
     z-index: 99;
-    transition: all 0.5s ease;
+    transition: all 0.35s ease;
     padding: 100px 0;
   }
 
@@ -142,12 +143,16 @@ a {
     width: 0px !important;
   }
 
+  .menu-links.close a {
+    animation: fadeOut 0.25s ease both;
+  }
+
   .menu-icon {
     position: absolute;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 24px;
+    height: 27px;
     width: 30px;
     cursor: pointer;
     right: 16px;
@@ -155,9 +160,9 @@ a {
   }
 
   .menu-icon.opened .line1 {
-    transform: rotate(45deg);
+    transform: rotate(45deg) scale(1.125);
     transform-origin: top left;
-    transition: all 0.25s ease;
+    transition: all 0.35s ease;
   }
 
   .menu-icon.opened .line2 {
@@ -167,7 +172,7 @@ a {
   }
 
   .menu-icon.opened .line3 {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(1.125);
     transform-origin: bottom left;
     transition: all 0.25s ease;
   }
@@ -198,5 +203,25 @@ a {
   body {
     color: white;
     background: #155457;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes peakUp {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
   }
 }

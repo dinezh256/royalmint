@@ -4,7 +4,7 @@ import contact from "../../assets/images/contact.svg";
 const Footer = () => {
   return (
     <div className="footer">
-      <Image src={contact} alt="contact" />
+      <Image src={contact} alt="contact" draggable={false} priority={true} />
     </div>
   );
 };
