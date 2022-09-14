@@ -83,7 +83,7 @@ a {
   white-space: nowrap;
   font-size: 17px;
   transition: all 0.2s ease;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans";
 }
 
 .menu-links a:hover {
@@ -99,11 +99,11 @@ a {
 
 @media screen and (max-width: 500px) {
   .navbar {
-    padding: 10px 25px;
+    padding: 5px 5px;
   }
 
   .main-app {
-    margin-top: 80px;
+    margin-top: 70px;
   }
 
   .menuImage {
@@ -132,8 +132,10 @@ a {
   }
 
   .menu-links a {
-    padding: 15px 0 10px 100px;
+    padding: 15px 0 10px 80px;
     font-size: 28px;
+    font-family: "Gill Sans";
+    font-weight: 600;
   }
 
   .menu-links.close {
@@ -148,7 +150,7 @@ a {
     height: 24px;
     width: 30px;
     cursor: pointer;
-    right: 25px;
+    right: 16px;
     z-index: 100;
   }
 
