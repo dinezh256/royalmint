@@ -8,17 +8,13 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#155457" />
-          <meta name="description" content="The Royal Mint Baharagora"
-        />
+          <meta name="description" content="The Royal Mint Baharagora" />
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://royalmint.vercel.app/" />
           <meta property="og:title" content="The Royal Mint Baharagora" />
-          <meta
-            property="og:description"
-            content="The Royal Mint Baharagora"
-          />
+          <meta property="og:description" content="The Royal Mint Baharagora" />
           <meta
             property="og:image"
             content="https://royalmint.vercel.app//logo512.png"
