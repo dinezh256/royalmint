@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import Navbar from "../components/navbar";
 import Landing from "../components/landing";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Landing />
+      <Footer />
     </>
   );
 }

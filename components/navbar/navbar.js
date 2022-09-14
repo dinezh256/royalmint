@@ -33,8 +33,8 @@ const Navbar = () => {
           alt="client Background"
           draggable={false}
           priority={true}
-          width={96}
-          height={75}
+          width={80}
+          height={62.5}
         />
       </Link>
       <div className="menu">
