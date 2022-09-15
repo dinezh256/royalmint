@@ -183,6 +183,10 @@ a {
     animation: peakUp 0.5s ease both;
   }
 
+  .menu-links span:hover {
+    color: #155457;
+  }
+
   .menu-links.close {
     width: 0px !important;
   }
