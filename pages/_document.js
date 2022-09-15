@@ -11,7 +11,11 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#155457" />
           <meta name="description" content="The Royal Mint Baharagora" />
           <meta name="msapplication-TileColor" content="#155457"></meta>
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
           <link
             rel="icon"
             type="image/png"

@@ -12,19 +12,16 @@ const Navbar = () => {
     setOpenMenu(state);
 
     if (isMobile) {
-      if (!state) {
-        document.body.classList.remove("menu-opened");
-      } else {
-        document.body.classList.add("menu-opened");
-      }
+      if (!state) document.body.classList.remove("menu-opened");
+      else document.body.classList.add("menu-opened");
     }
   };
 
   const MenuLink = ({ id, children }) => (
     <span
       onClick={() => {
-        handleOpenMenu(!openMenu);
-        scrollToComponent(id);
+        handleOpenMenu(false);
+        setTimeout(() => scrollToComponent(id), 500);
       }}
     >
       {children}
@@ -66,6 +63,7 @@ const Navbar = () => {
             <div className="line2"></div>
             <div className="line3"></div>
           </div>
+          
           <div className={`menu-links ${openMenu ? "open" : "close"}`}>
             <MenuLink id="snacks">Snacks</MenuLink>
             <MenuLink id="breakfast">Breakfast</MenuLink>

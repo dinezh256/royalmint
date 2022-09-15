@@ -26,17 +26,18 @@ a {
   scroll-behavior: smooth;
 }
 
-.main-app {
-  margin-top: 90px;
+.royal-mint-menu {
+  margin-top: 96px;
   background: url("../assets/images/background.jpeg") repeat;
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-.main-app-overlay {
+.menu-overlay {
   background: #155457f0;
   overflow: hidden;
+  user-select: none;
 }
 
 .menuImage {
@@ -55,12 +56,13 @@ a {
 
 .navbar-container {
   background-color: #1554576e;
-  backdrop-filter: blur(8px) brightness(0.8);
+  backdrop-filter: blur(10px) brightness(0.75);
   width: 100vw;
   padding: 15px 0;
   position: fixed;
   top: 0;
   z-index: 5;
+  height: 96px;
 }
 
 .navbar {
@@ -77,6 +79,10 @@ a {
   overflow: hidden;
 }
 
+.navbar-logo {
+  cursor: pointer;
+}
+
 .menu-icon {
   display: none;
   width: 0%;
@@ -90,7 +96,7 @@ a {
 }
 
 .menu-links span {
-  padding: 0 10px;
+  padding: 0 14px;
   white-space: nowrap;
   font-size: 18px;
   transition: all 0.2s ease;
@@ -101,14 +107,20 @@ a {
 }
 
 .menu-links span:hover {
-  color: #c3b45d;
+  color: #b18f44;
   transition: all 0.2s ease;
 }
 
 .footer {
   width: 100vw;
   display: flex;
+  padding: 50px 0;
   justify-content: center;
+  background: #b18f44;
+}
+
+.footer a {
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 500px) {
@@ -120,6 +132,7 @@ a {
   .navbar-container {
     padding: 5px 5px;
     z-index: 101;
+    height: 76px;
   }
 
   .navbar {
@@ -131,8 +144,8 @@ a {
     transition: all 0.25s ease;
   }
 
-  .main-app {
-    margin-top: 70px;
+  .royal-mint-menu {
+    margin-top: 76px;
   }
 
   .menuImage {
@@ -150,16 +163,16 @@ a {
   .menu-links {
     position: absolute;
     background-color: #b18f44;
-    height: calc(100vh - 72.5px);
+    height: calc(100vh - 76px);
     width: 100vw !important;
     right: 0;
-    top: 72.5px;
+    top: 76px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     z-index: 99;
     transition: all 0.35s ease;
-    padding: 60px 0;
+    padding: 30px 0;
   }
 
   .menu-links span {
@@ -224,6 +237,10 @@ a {
     transform: rotate(0deg);
     transition: all 0.25s ease;
     transform-origin: bottom left;
+  }
+
+  .footer {
+    padding: 20px 0;
   }
 }
 

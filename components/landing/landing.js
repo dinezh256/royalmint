@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Image from "next/image";
 
 import page2 from "./../../assets/images/desktop/02.png";
@@ -26,9 +27,15 @@ import useWindowSize from "../../hooks/useWindowSize";
 const Landing = () => {
   const isMobile = useWindowSize().width < 500;
 
+  useEffect(() => {
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+  }, []);
+
   return (
-    <div className="main-app" key={isMobile}>
-      <div className="main-app-overlay">
+    <div className="royal-mint-menu" key={isMobile}>
+      <div className="menu-overlay">
         <div className="menuImageContainer" id="snacks">
           <Image
             src={isMobile ? page2M : page2}
