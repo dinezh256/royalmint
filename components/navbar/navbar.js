@@ -19,14 +19,14 @@ const Navbar = () => {
   };
 
   const MenuLink = ({ id, children }) => (
-    <span
+    <h6
       onClick={() => {
         handleOpenMenu(false);
-        setTimeout(() => scrollToComponent(id), 500);
+        setTimeout(() => scrollToComponent(id), isMobile ? 500 : 0);
       }}
     >
       {children}
-    </span>
+    </h6>
   );
 
   const scrollToComponent = (id) => {
@@ -35,7 +35,9 @@ const Navbar = () => {
       const position = doc.getBoundingClientRect();
       window.scrollTo(
         position.left,
-        position.top + window.scrollY - (hasDiscountExpired ? 90 : 120)
+        position.top +
+          window.scrollY -
+          (hasDiscountExpired ? 90 : isMobile ? 120 : 142)
       );
     }
   };
