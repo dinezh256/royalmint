@@ -73,7 +73,6 @@ a {
   background-color: #1554576e;
   backdrop-filter: blur(10px) brightness(0.75);
   width: 100vw;
-  padding: 15px 0;
   position: fixed;
   top: 0;
   z-index: 5;
@@ -81,6 +80,7 @@ a {
 }
 
 .navbar {
+  padding: 15px 0;
   margin: auto;
   width: 84%;
   display: flex;
@@ -130,7 +130,6 @@ a {
   position: relative;
   margin-top: 96px;
   padding: 0px 10px;
-  z-index: 105;
   background: black;
   display: flex;
   align-items: center;
@@ -156,6 +155,7 @@ a {
   position: relative;
   font-weight: 500;
   font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .banner span b {
@@ -181,13 +181,13 @@ a {
   }
 
   .navbar-container {
-    padding: 5px 5px;
     z-index: 101;
-    height: 76px;
+    height: 76px !important;
   }
 
   .navbar {
-    width: 100%;
+    padding: 5px 5px;
+    width: calc(100% - 10px);
   }
 
   .navbar-logo.opened {
@@ -296,7 +296,6 @@ a {
 
   .banner {
     margin-top: 76px;
-    padding-right: 0px;
   }
 
   .banner span {
