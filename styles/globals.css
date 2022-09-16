@@ -127,13 +127,15 @@ a {
 }
 
 .banner {
-  position: relative;
-  margin-top: 96px;
+  position: fixed;
+  top: 96px;
   padding: 0px 10px;
+  z-index: 5;
   background: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 
 .banner .percent-icon {
@@ -295,7 +297,7 @@ a {
   }
 
   .banner {
-    margin-top: 76px;
+    top: 76px;
   }
 
   .banner span {

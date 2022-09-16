@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "./../../assets/images/logo.png";
 import useWindowSize from "../../hooks/useWindowSize";
+import { hasDiscountExpired } from "../../utils";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -32,7 +33,10 @@ const Navbar = () => {
     const doc = window.document.getElementById(id);
     if (doc) {
       const position = doc.getBoundingClientRect();
-      window.scrollTo(position.left, position.top + window.scrollY - 90);
+      window.scrollTo(
+        position.left,
+        position.top + window.scrollY - (hasDiscountExpired ? 90 : 120)
+      );
     }
   };
 
@@ -63,7 +67,7 @@ const Navbar = () => {
             <div className="line2"></div>
             <div className="line3"></div>
           </div>
-          
+
           <div className={`menu-links ${openMenu ? "open" : "close"}`}>
             <MenuLink id="snacks">Snacks</MenuLink>
             <MenuLink id="breakfast">Breakfast</MenuLink>

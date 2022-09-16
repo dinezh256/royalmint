@@ -4,9 +4,16 @@ import Head from "next/head";
 import Navbar from "../components/navbar";
 import Landing from "../components/landing";
 import Footer from "../components/footer";
-import Banner from '../components/banner';
+import Banner from "../components/banner";
+import useWindowSize from "../hooks/useWindowSize";
+import { hasDiscountExpired, NAVBAR_HEIGHT, BANNER_HEIGHT } from "../utils";
 
 export default function Home() {
+  const isMobile = useWindowSize().width < 500;
+  const topbarHeight = hasDiscountExpired
+    ? NAVBAR_HEIGHT[isMobile ? "mobile" : "desktop"]
+    : NAVBAR_HEIGHT[isMobile ? "mobile" : "desktop"] +
+      BANNER_HEIGHT[isMobile ? "mobile" : "desktop"];
   return (
     <>
       <Head>
@@ -16,8 +23,10 @@ export default function Home() {
           content="The Royal Mint - a multicuisine restaurant in Baharagora"
         />
       </Head>
-      <Navbar />
-      <Banner />
+      <div style={{ height: topbarHeight }}>
+        <Navbar />
+        <Banner />
+      </div>
       <Landing />
       <Footer />
     </>
