@@ -50,6 +50,22 @@ a {
   animation-delay: 0.5s;
 }
 
+.spotify-embedded {
+  max-width: 400px;
+  margin: auto;
+  margin-top: -30px;
+  margin-bottom: 60px;
+  background-color: #155457;
+  border-radius: 7.5px;
+}
+
+.spotify-embedded iframe {
+  background-color: #155457;
+  border-radius: 7.5px;
+  height: 162px;
+  width: 100%;
+}
+
 .menuImageContainer {
   overflow: hidden;
 }
@@ -155,6 +171,10 @@ a {
     max-height: 100% !important;
   }
 
+  .spotify-embedded {
+    margin: 0 10px 40px 10px;
+  }
+  
   .navbar-logo {
     transform: scale(0.75);
     transition: all 0.25s ease;

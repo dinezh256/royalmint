@@ -120,6 +120,15 @@ const Landing = () => {
             draggable={false}
           />
         </div>
+        <div className="spotify-embedded">
+          <iframe
+            src="https://www.jiosaavn.com/embed/playlist/49"
+            frameBorder="0"
+            allowFullScreen={false}
+            allow={"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"}
+            loading="lazy"
+         />
+        </div>
       </div>
     </div>
   );
