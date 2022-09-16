@@ -22,16 +22,15 @@ a {
 }
 
 * {
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 .royal-mint-menu {
-  margin-top: 96px;
   background: url("../assets/images/background.jpeg") repeat;
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
 }
 
 .menu-overlay {
@@ -127,6 +126,42 @@ a {
   transition: all 0.2s ease;
 }
 
+.banner {
+  position: relative;
+  margin-top: 96px;
+  padding: 0px 10px;
+  z-index: 105;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .percent-icon {
+  background-color: #155457;
+  border-radius: 50%;
+  padding: 5px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner span {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.banner span b {
+  color: #b18f44;
+}
+
 .footer {
   width: 100vw;
   display: flex;
@@ -160,10 +195,6 @@ a {
     transition: all 0.25s ease;
   }
 
-  .royal-mint-menu {
-    margin-top: 76px;
-  }
-
   .menuImage {
     max-width: 100% !important;
     min-width: 100% !important;
@@ -174,7 +205,7 @@ a {
   .spotify-embedded {
     margin: 0 10px 40px 10px;
   }
-  
+
   .navbar-logo {
     transform: scale(0.75);
     transition: all 0.25s ease;
@@ -261,6 +292,16 @@ a {
     transform: rotate(0deg);
     transition: all 0.25s ease;
     transform-origin: bottom left;
+  }
+
+  .banner {
+    margin-top: 76px;
+    padding-right: 0px;
+  }
+
+  .banner span {
+    font-size: 12px;
+    padding: 10px 0px;
   }
 
   .footer {
