@@ -10,7 +10,7 @@ const Banner = () => {
         <Percent size={18} />
       </div>
       <span>
-        Avail <b>10%</b> flat discount from 11th to 20th Sep 2022!&emsp;🎉
+        Avail <b>10%</b> flat discount from 11th to 20th Sep 2022! 🎉
       </span>
     </div>
   );
