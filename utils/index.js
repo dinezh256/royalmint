@@ -1,6 +1,6 @@
-const expiryDate = "08/21/2022";
+const expiryDate = "08/20/2022";
 
-export const hasDiscountExpired = new Date(expiryDate) > new Date();
+export const hasDiscountExpired = +new Date(expiryDate) < +new Date();
 
 export const NAVBAR_HEIGHT = {
   desktop: 96,
