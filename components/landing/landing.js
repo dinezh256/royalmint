@@ -95,7 +95,7 @@ const Landing = () => {
             draggable={false}
           />
         </div>
-        <div className="menuImageContainer" id="non-veg">
+        {!isMobile && <div className="menuImageContainer" id="non-veg">
           <Image
             src={isMobile ? page9M : page9}
             className="menuImage"
@@ -103,7 +103,7 @@ const Landing = () => {
             draggable={false}
             priority={true}
           />
-        </div>
+        </div>}
         <div className="menuImageContainer" id="desserts">
           <Image
             src={isMobile ? page10M : page10}
