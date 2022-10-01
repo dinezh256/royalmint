@@ -45,15 +45,15 @@ const Landing = () => {
             priority={true}
           />
         </div>
-        <div className="menuImageContainer" id="breakfast">
+        {!isMobile && <div className="menuImageContainer" id="breakfast">
           <Image
-            src={isMobile ? '' : page3}
+            src={isMobile ? page3M : page3}
             className="menuImage"
             alt="breakast"
             draggable={false}
             priority={true}
           />
-        </div>
+        </div>}
         <div className="menuImageContainer" id="chinese">
           <Image
             src={isMobile ? page4M : page4}
