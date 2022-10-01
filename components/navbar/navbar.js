@@ -72,7 +72,7 @@ const Navbar = () => {
 
           <div className={`menu-links ${openMenu ? "open" : "close"}`}>
             <MenuLink id="snacks">Snacks</MenuLink>
-            <MenuLink id="breakfast">Breakfast</MenuLink>
+            {!isMobile && <MenuLink id="breakfast">Breakfast</MenuLink>}
             <MenuLink id="chinese">Chinese</MenuLink>
             <MenuLink id="tandoori">Tandoori</MenuLink>
             <MenuLink id="bread">Bread</MenuLink>

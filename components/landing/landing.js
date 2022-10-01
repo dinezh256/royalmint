@@ -47,7 +47,7 @@ const Landing = () => {
         </div>
         <div className="menuImageContainer" id="breakfast">
           <Image
-            src={isMobile ? page3M : page3}
+            src={isMobile ? '' : page3}
             className="menuImage"
             alt="breakast"
             draggable={false}
