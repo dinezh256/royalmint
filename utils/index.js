@@ -1,4 +1,4 @@
-const expiryDate = "08/20/2022";
+const expiryDate = "10/25/2022";
 
 export const hasDiscountExpired = +new Date(expiryDate) < +new Date();
 

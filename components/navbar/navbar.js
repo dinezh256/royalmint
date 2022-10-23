@@ -77,14 +77,8 @@ const Navbar = () => {
             <MenuLink id="tandoori">Tandoori</MenuLink>
             <MenuLink id="bread">Bread</MenuLink>
             <MenuLink id="rice">Rice</MenuLink>
-            {isMobile ? (
-              <MenuLink id="veg">Main Course</MenuLink>
-            ) : (
-              <>
-                <MenuLink id="veg">Veg</MenuLink>
-                <MenuLink id="non-veg">Non-Veg</MenuLink>
-              </>
-            )}
+            <MenuLink id="veg">Veg</MenuLink>
+            <MenuLink id="non-veg">Non-Veg</MenuLink>
             <MenuLink id="desserts">Desserts</MenuLink>
             <MenuLink id="beverages">Beverage</MenuLink>
           </div>
