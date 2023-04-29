@@ -14,6 +14,7 @@ export default function Home() {
     ? NAVBAR_HEIGHT[isMobile ? "mobile" : "desktop"]
     : NAVBAR_HEIGHT[isMobile ? "mobile" : "desktop"] +
       BANNER_HEIGHT[isMobile ? "mobile" : "desktop"];
+
   return (
     <>
       <Head>
