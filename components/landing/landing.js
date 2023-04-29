@@ -125,10 +125,7 @@ const Landing = () => {
             src="https://www.jiosaavn.com/embed/playlist/49"
             frameBorder="0"
             allowFullScreen={false}
-            allow={
-              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            }
-            loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media;"
           />
         </div>
       </div>
